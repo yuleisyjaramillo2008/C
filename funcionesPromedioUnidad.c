@@ -20,6 +20,8 @@ int main(){
 
     return 0; 
 }
+
+// Control del número de actividades
 int validacionNumeroActividad(){
     int actividad;
     do{
@@ -31,6 +33,8 @@ int validacionNumeroActividad(){
     }while(actividad<=0);
     return actividad;
 }
+
+// Control del ingreso de notas. 
 float validacionNota(){
     float nota;
     do{
@@ -43,6 +47,7 @@ float validacionNota(){
     return nota;
 }
 
+// Función para calcular el promedio de cada unidad sumando los preponderados. 
 float calculoPromedioUnidad(int a){
     float preponderadoACD, preponderadoAPE, preponderadoAA, preponderadoES, promedioUnidad;
     printf("Unidad %i\n", a);
@@ -59,6 +64,8 @@ float calculoPromedioUnidad(int a){
     return promedioUnidad;
     
 }
+
+// Función para calcular el preponderado de ACD
 float calcularACD(){
     int j, numeroActividad;
     float preponderadoACD, nota, promedioACD=0;
@@ -71,6 +78,8 @@ float calcularACD(){
     preponderadoACD= (promedioACD/numeroActividad)*0.2;
     return preponderadoACD;
 }
+
+// Función para calcular el preponderado de los APE.
 float calcularAPE(){
     int j, numeroActividad;
     float preponderadoAPE, nota, promedioAPE=0;
@@ -84,6 +93,8 @@ float calcularAPE(){
     return preponderadoAPE;
 
 }
+
+// Función para calcular el preponderado de los AA.
 float calcularAA(){
     int j, numeroActividad;
     float preponderadoAA, nota, promedioAA=0;
@@ -96,6 +107,8 @@ float calcularAA(){
     preponderadoAA= (promedioAA/numeroActividad)*0.2;
     return preponderadoAA;
 }
+
+// Función para calcular el preponderado del Examen Sumatívo.
 float calcularExamenSumativo(){
     float porcentajeABP, porcentajePD, notaABP, notaPD, preponderadoES;
     do{
@@ -110,6 +123,8 @@ float calcularExamenSumativo(){
     preponderadoES=(notaABP*(porcentajeABP/100)+notaPD*(porcentajePD/100))*0.35;
     return preponderadoES;
 }
+
+// Calculo de la nota del ciclo. 
 void notaCiclo(float a){
     a=a/3;
     printf("Su nota final del ciclo es: %f\n", a);
